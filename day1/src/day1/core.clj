@@ -25,7 +25,9 @@
 
 (defn readinput []
   (str/split
-    (slurp "/Users/jonathanmourtada/projects/clojure_advent/day1/input") #","))
+    (slurp
+      (clojure.java.io/resource "input"))
+       #","))
 
 (defn sanitize [inputs]
   (map str/trim inputs))
